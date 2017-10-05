@@ -1,2 +1,7 @@
 # kuromarumusic.github.io
-My website!
+My developer blog.
+
+Find here:
+
+- Tutorials
+- Updates on my projects
