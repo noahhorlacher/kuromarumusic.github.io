@@ -14,23 +14,44 @@ h2, .subtitle{
           font-size: 1em;
 }
 
-a {
+p, ul, li, center{
+          font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+a, ul a, li a {
           text-decoration: none;
           font-family: 'Encode Sans Expanded', sans-serif;
           cursor: pointer;
+          color: rgb(90, 0, 163);
 }
 
-a:hover{
+a:hover, ul a:hover, li a:hover{
           text-decoration: underline;
 }
 
 nav {
+          top: 0;
+          z-index: 1000;
+          width: 100%;
+          position: fixed;
           padding: 1em 0;
           background-color: white;
           text-align: center;
           -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.08);
           -moz-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.08);
+          opacity: 1;
+          transition: opacity 0.5s, padding 0.5s;
+}
+
+nav.notontop{
+          padding: 0.3em 0;
+          opacity: 0.3;
+}
+
+nav:hover{
+          opacity: 1;
+          padding: 1em 0;
 }
 
 nav a {
@@ -44,6 +65,7 @@ section{
           margin: auto;
           text-align: center;
           padding: 2em 10%;
+          max-width: 1000px;
 }
 
 .shortpost{
@@ -146,6 +168,12 @@ section{
           padding-bottom: 14em;
 }
 
+.fullpost .picture.author{
+          margin: 5em auto 1em auto;
+          width: 8em;
+          padding-bottom: 8em;
+}
+
 .lrlist{
           display: inline-block;
 }
@@ -176,8 +204,53 @@ section{
 
 .showall{
           margin-top: 1em;
+          color: black;
 }
 
 .mtop{
           margin-top: 2em;
+}
+
+.fullpost{
+          padding-top: 6em;
+}
+
+.fullpost .thumbnail{
+          background-size: cover;
+          background-position: center;
+          padding: 3em;
+          margin-bottom: 2em;
+}
+
+.fullpost .thumbnail .title{
+          position: relative;
+          top: 50%;
+}
+
+.fullpost .post{
+          text-align: left;
+}
+
+.fullpost ul, .fullpost li, .fullpost ol{
+          text-align: left;
+}
+
+.centerlist ul, .centerlist ol{
+          width: auto;
+          margin: auto;
+          display: inline-block;
+}
+
+pre{
+          width: 100%;
+          text-align: left;
+}
+
+.name{
+          font-weight: 900;
+}
+
+.date{
+          opacity: 0.4;
+          font-weight: 900;
 }

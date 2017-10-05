@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta charset="utf-8" />
+          <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Lobster|Ubuntu+Mono" rel="stylesheet">
+          <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+          <link rel="stylesheet" href="../../css/font-awesome-4.7.0/css/font-awesome.min.css">
+          <link rel="stylesheet" type="text/css" href="../../css/main.css">
+</head>
+
+<body>
+          <nav id="navigation" class="">
+                    <a href="../../index.html">KUROMARU</a>
+          </nav>
+
+          <section class="fullpost">
+                    <div class="thumbnail whitetext round" style="background-image: url('../../images/thumbnails/posts/2017/nhd-arduino-thumbnail.jpg')">
+                              <h1 class="title">How to connect a NHD C12864A1ZFSBFBWH to an Arduino</h1>
+                    </div>
+                    <h2>In this tutorial, you'll learn how to connect a <strong>Newhaven Display C12864A1ZFSBFBWH</strong> to an Arduino and display a simple "Hello World!".</h2><br />
+
+                    <p class="post">
+
+                              <center>You'll need:</center><br/>
+
+                              <div class="centerlist">
+                                        <ul>
+                                                  <li>
+                                                            Arduino (I'm using the <strong>Arduino Mega 2560</strong>)
+                                                  </li>
+                                                  <li>
+                                                            Newhaven Display C12864A1ZFSBFBWH <a href="http://www.mouser.ch/ProductDetail/Newhaven-Display/NHD-C12864A1Z-FSB-FBW-HTT/?qs=krDt2o00aZeTqEjRoSuO%2fQ==">(Buy)</a>
+                                                  </li>
+                                        </ul>
+                              </div><br /><br />
+
+                              <h2>Connect your display.</h2>
+                              <div class="centerlist">
+                                        <ol>
+                                                  <li>
+                                                            Digital Pin 10 to LCD Pin 1
+                                                  </li>
+                                                  <li>
+                                                            Digital Pin 9 to LCD Pin 2
+                                                  </li>
+                                                  <li>
+                                                            Digital Pin 8 to LCD Pin 4
+                                                  </li>
+                                                  <li>
+                                                            Digital Pin 7 to LCD Pin 5
+                                                  </li>
+                                                  <li>
+                                                            Digital Pin 6 to LCD Pin 6
+                                                  </li>
+                                                  <li>
+                                                            3.3V output to LCD Pin 3 and 12
+                                                  </li>
+                                                  <li>
+                                                            LCD Pin 7 to ground
+                                                  </li>
+                                        </ol>
+                              </div><br /><br />
+
+                              <h2>Install the library.</h2>
+                              <p>
+                                        Inside the Arduino IDE, go to Sketch > Include Library > Manage Libraries...<br /> A window will pop up. Click the search bar and search for "U8g2". <strong><br />
+                                        Select the newest version and click on "Install".</strong><br /> Alternatively, the library can be downloaded <a href="https://github.com/olikraus/u8g2">here</a> and added at "Sketch > Include Library > Add .ZIP
+                                        Library" in the Arduino IDE.</p>
+
+                              </br/>
+
+                              <h2>Run the code.</h2>
+                              <p>
+                                        The following code will display a simple "Hello World!" on your Newhaven Display. Check the comments for explanations.
+                              </p>
+
+                              <pre>
+                                        <code class="prettyprint">
+                              <font color="#434f54">//Include the U8g2 library</font>
+                              <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">U8g2lib</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+                              <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">U8x8lib</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+
+                              <font color="#95a5a6">/*Those are the pins the Arduino connects to the display with.</font>
+                              <font color="#95a5a6"> * Find more details regarding the pins: </font><u><font color="#95a5a6">http://www.newhavendisplay.com/specs/NHD-C12864A1Z-FSB-FBW-HTT.pdf</font></u><font color="#95a5a6"></font>
+                              <font color="#95a5a6"> */</font>
+                              <font color="#5e6d03">#define</font> <font color="#000000">LCD_SERIAL_CLOCK_PIN</font> <font color="#000000">10</font>
+                              <font color="#5e6d03">#define</font> <font color="#000000">LCD_SERIAL_DATA_PIN</font> <font color="#000000">9</font>
+                              <font color="#5e6d03">#define</font> <font color="#000000">LCD_REGISTER_SELECT_PIN</font> <font color="#000000">8</font>
+                              <font color="#5e6d03">#define</font> <font color="#000000">LCD_RESET_PIN</font> <font color="#000000">7</font>
+                              <font color="#5e6d03">#define</font> <font color="#000000">LCD_CHIP_SELECT_PIN</font> <font color="#000000">6</font>
+
+
+                              <font color="#95a5a6">/*The U8g2 library requires a display object. in this case, it's called "u8g2".</font>
+                              <font color="#95a5a6"> * For more information on how to use the library: </font><u><font color="#95a5a6">https://github.com/olikraus/u8g2/wiki/setup_tutorial</font></u><font color="#95a5a6"></font>
+                              <font color="#95a5a6"> */</font>
+                              <font color="#000000">U8G2_ST7565_NHD_C12864_F_4W_SW_SPI</font> <font color="#000000">u8g2</font><font color="#000000">(</font><font color="#000000">U8G2_R0</font><font color="#434f54">,</font> <font color="#000000">LCD_SERIAL_CLOCK_PIN</font><font color="#434f54">,</font> <font color="#000000">LCD_SERIAL_DATA_PIN</font><font color="#434f54">,</font> <font color="#000000">LCD_CHIP_SELECT_PIN</font><font color="#434f54">,</font> <font color="#000000">LCD_REGISTER_SELECT_PIN</font><font color="#434f54">,</font> <font color="#000000">LCD_RESET_PIN</font><font color="#000000">)</font><font color="#000000">;</font>
+
+                              <font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+                               &nbsp;<font color="#434f54">//Start the lcd communication</font>
+                               &nbsp;<font color="#000000">u8g2</font><font color="#434f54">.</font><font color="#d35400">begin</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+                              <font color="#000000">}</font>
+
+                              <font color="#00979c">void</font> <font color="#5e6d03">loop</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+                               &nbsp;<font color="#434f54">//Shows the text</font>
+                               &nbsp;<font color="#000000">u8g2</font><font color="#434f54">.</font><font color="#000000">firstPage</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+                               &nbsp;
+                               &nbsp;<font color="#5e6d03">do</font> <font color="#000000">{</font>
+                               &nbsp;&nbsp;&nbsp;<font color="#95a5a6">/*Sets the font. </font>
+                              <font color="#95a5a6"> &nbsp;&nbsp;&nbsp;&nbsp;* List of all the fonts: </font><u><font color="#95a5a6">https://github.com/olikraus/u8g2/wiki/fntlistall#all-u8g2-fonts-capital-a-height</font></u><font color="#95a5a6"></font>
+                              <font color="#95a5a6"> &nbsp;&nbsp;&nbsp;&nbsp;*/</font>
+                               &nbsp;&nbsp;&nbsp;<font color="#000000">u8g2</font><font color="#434f54">.</font><font color="#000000">setFont</font><font color="#000000">(</font><font color="#000000">u8g2_font_ncenB14_tr</font><font color="#000000">)</font><font color="#000000">;</font>
+                               &nbsp;&nbsp;&nbsp;
+                               &nbsp;&nbsp;&nbsp;<font color="#434f54">//Draws a string at position X = 0 and Y = 24. Play around with the text!</font>
+                               &nbsp;&nbsp;&nbsp;<font color="#000000">u8g2</font><font color="#434f54">.</font><font color="#000000">drawStr</font><font color="#000000">(</font><font color="#000000">0</font><font color="#434f54">,</font> <font color="#000000">24</font><font color="#434f54">,</font> <font color="#005c5f">"Hello World!"</font><font color="#000000">)</font><font color="#000000">;</font>
+                               &nbsp;<font color="#000000">}</font> <font color="#5e6d03">while</font> <font color="#000000">(</font> <font color="#000000">u8g2</font><font color="#434f54">.</font><font color="#000000">nextPage</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">)</font><font color="#000000">;</font>
+                              <font color="#000000">}</font>
+                              </code>
+                              </pre>
+                              <a class="downloadbutton" href="../../downloads/2017/arduino_sketches/NHD-C12864A1ZFSBFBWH.zip">Download <span>Source</span></a>
+                              </br/><br />
+                              <p>
+                                        That's it! You're all set to have a lot of fun with your display.
+                              </p><br/>
+                              <div class="picture round author" style="background-image: url('../../images/resources/profile.png')"></div>
+                              <p class="name">— Noah Horlacher</p><br />
+                              <p class="date">
+                                        Posted on 5 October, 2017
+                              </p><br /><br />
+                    </p>
+
+                    <a class="showall" href="../all.html">Show all posts →</a>
+          </section>
+
+          <script src="../../js/header.js"></script>
+          <script src="../../js/prettyprint.js"></script>
+          <link rel="stylesheet" href="../..//js/highlight/styles/default.css">
+          <script src="../..//js/highlight/highlight.pack.js"></script>
+          <script>
+                    hljs.initHighlightingOnLoad();
+          </script>
+</body>
+
+</html>
