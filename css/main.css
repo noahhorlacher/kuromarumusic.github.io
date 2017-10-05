@@ -4,6 +4,10 @@
      box-sizing: border-box;
 }
 
+body{
+          overflow-x: hidden;
+}
+
 h1, .title{
           font-family: 'Ubuntu Mono', monospace;
           font-size: 1.7em;
