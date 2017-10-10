@@ -4,142 +4,161 @@
 <head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <meta charset="utf-8" />
-          <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Lobster|Ubuntu+Mono" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Ubuntu+Mono" rel="stylesheet">
           <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
           <link rel="stylesheet" href="../../css/font-awesome-4.7.0/css/font-awesome.min.css">
           <link rel="stylesheet" type="text/css" href="../../css/main.css">
+          <script src="../../js/ltgt.js"></script>
+          <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
 </head>
 
 <body>
-          <nav id="navigation" class="">
-                    <a href="../../index.html">KUROMARU</a>
-          </nav>
+          <div id="wrapper">
 
-          <section class="fullpost">
-                    <div class="thumbnail whitetext round" style="background-image: url('../../images/thumbnails/posts/2017/nhd-arduino-thumbnail.jpg')">
-                              <h1 class="title">How to connect a NHD C12864A1ZFSBFBWH to an Arduino</h1>
-                    </div>
-                    <h2>In this tutorial, you'll learn how to connect a <strong>Newhaven Display C12864A1ZFSBFBWH</strong> to an Arduino and display a simple "Hello World!".</h2><br />
+                    <div id="backtotop" class="" style="background-image: url('../../images/resources/backtotop.svg')"></div>
 
-                    <p class="post">
+                    <nav id="navigation" class="">
+                              <a href="../../index.html">
+                                        <div class="logo" style="background-image: url('../../images/resources/logo_line.svg')">
+                                        </div>
+                              </a>
+                    </nav>
 
-                              <center>You'll need:</center><br/>
-
-                              <div class="centerlist">
-                                        <ul>
-                                                  <li>
-                                                            Arduino (I'm using the <strong>Arduino Mega 2560</strong>)
-                                                  </li>
-                                                  <li>
-                                                            Newhaven Display C12864A1ZFSBFBWH <a href="http://www.mouser.ch/ProductDetail/Newhaven-Display/NHD-C12864A1Z-FSB-FBW-HTT/?qs=krDt2o00aZeTqEjRoSuO%2fQ==">(Buy)</a>
-                                                  </li>
-                                        </ul>
-                              </div><br /><br />
-
-                              <h2>Connect your display.</h2>
-                              <div class="centerlist">
-                                        <ol>
-                                                  <li>
-                                                            Digital Pin 10 to LCD Pin 1
-                                                  </li>
-                                                  <li>
-                                                            Digital Pin 9 to LCD Pin 2
-                                                  </li>
-                                                  <li>
-                                                            Digital Pin 8 to LCD Pin 4
-                                                  </li>
-                                                  <li>
-                                                            Digital Pin 7 to LCD Pin 5
-                                                  </li>
-                                                  <li>
-                                                            Digital Pin 6 to LCD Pin 6
-                                                  </li>
-                                                  <li>
-                                                            3.3V output to LCD Pin 3 and 12
-                                                  </li>
-                                                  <li>
-                                                            LCD Pin 7 to ground
-                                                  </li>
-                                        </ol>
-                              </div><br /><br />
-
-                              <h2>Install the library.</h2>
-                              <p>
-                                        Inside the Arduino IDE, go to Sketch > Include Library > Manage Libraries...<br /> A window will pop up. Click the search bar and search for "U8g2". <strong><br />
-                                        Select the newest version and click on "Install".</strong><br /> Alternatively, the library can be downloaded <a href="https://github.com/olikraus/u8g2">here</a> and added at "Sketch > Include Library > Add .ZIP
-                                        Library" in the Arduino IDE.</p>
-
-                              </br/>
-
-                              <h2>Run the code.</h2>
-                              <p>
-                                        The following code will display a simple "Hello World!" on your Newhaven Display. Check the comments for explanations.
+                    <section class="fullpost">
+                              <h1 class="title"><span>How to connect a NHD C12864A1ZFSBFBWH to an Arduino<span></h1>
+                              <p class="metadata">
+                                        Noah Horlacher, 5 October 2017
                               </p>
+                              <p class="bodycopy">
+                                        I bought a Newhaven Display (C12864A1ZFSBFBWH) for my Arduino and had no idea how to connect and program it.<br /> The <a href="http://www.mouser.com/ds/2/291/NHD-C12864A1Z-FSB-FBW-HTT-49877.pdf">datasheet</a> did
+                                        only offer technical information, but no tutorial whatsoever.<br /> So here it is: <strong>How to connect a NHD C12864A1ZFSBFBWH to an Arduino.</strong>
+                              </p>
+                              <div class="thumbnail round" style="background-image: url('../../images/thumbnails/posts/2017/nhd-arduino-thumbnail.jpg')">
+                                        <p class="caption">In this tutorial, you'll learn how to connect a <strong>Newhaven Display C12864A1ZFSBFBWH</strong> to an Arduino and display a simple "Hello World!".</p>
+                              </div>
+                              <br />
 
-                              <pre>
-                                        <code class="prettyprint">
-                              <font color="#434f54">//Include the U8g2 library</font>
-                              <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">U8g2lib</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
-                              <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">U8x8lib</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+                              <p class="post">
 
-                              <font color="#95a5a6">/*Those are the pins the Arduino connects to the display with.</font>
-                              <font color="#95a5a6"> * Find more details regarding the pins: </font><u><font color="#95a5a6">http://www.newhavendisplay.com/specs/NHD-C12864A1Z-FSB-FBW-HTT.pdf</font></u><font color="#95a5a6"></font>
-                              <font color="#95a5a6"> */</font>
-                              <font color="#5e6d03">#define</font> <font color="#000000">LCD_SERIAL_CLOCK_PIN</font> <font color="#000000">10</font>
-                              <font color="#5e6d03">#define</font> <font color="#000000">LCD_SERIAL_DATA_PIN</font> <font color="#000000">9</font>
-                              <font color="#5e6d03">#define</font> <font color="#000000">LCD_REGISTER_SELECT_PIN</font> <font color="#000000">8</font>
-                              <font color="#5e6d03">#define</font> <font color="#000000">LCD_RESET_PIN</font> <font color="#000000">7</font>
-                              <font color="#5e6d03">#define</font> <font color="#000000">LCD_CHIP_SELECT_PIN</font> <font color="#000000">6</font>
+                                        You'll need:<br/>
+
+                                        <div class="centerlist">
+                                                  <ul>
+                                                            <li>
+                                                                      Arduino (I'm using the <strong>Arduino Mega 2560</strong>)
+                                                            </li>
+                                                            <li>
+                                                                      Newhaven Display C12864A1ZFSBFBWH <a href="http://www.mouser.ch/ProductDetail/Newhaven-Display/NHD-C12864A1Z-FSB-FBW-HTT/?qs=krDt2o00aZeTqEjRoSuO%2fQ==">(Buy)</a>
+                                                            </li>
+                                                  </ul>
+                                        </div><br /><br />
+
+                                        <h2>Connect your display.</h2>
+                                        <div class="centerlist">
+                                                  <ol>
+                                                            <li>
+                                                                      Digital Pin 10 to LCD Pin 1
+                                                            </li>
+                                                            <li>
+                                                                      Digital Pin 9 to LCD Pin 2
+                                                            </li>
+                                                            <li>
+                                                                      Digital Pin 8 to LCD Pin 4
+                                                            </li>
+                                                            <li>
+                                                                      Digital Pin 7 to LCD Pin 5
+                                                            </li>
+                                                            <li>
+                                                                      Digital Pin 6 to LCD Pin 6
+                                                            </li>
+                                                            <li>
+                                                                      3.3V output to LCD Pin 3 and 12
+                                                            </li>
+                                                            <li>
+                                                                      LCD Pin 7 to ground
+                                                            </li>
+                                                  </ol>
+                                        </div><br /><br />
+
+                                        <h2>Install the library.</h2>
+                                        <p>
+                                                  Inside the Arduino IDE, go to Sketch > Include Library > Manage Libraries...<br /> A window will pop up. Click the search bar and search for "U8g2". <strong><br />
+                                        Select the newest version and click on "Install".</strong><br /> Alternatively, the library can be downloaded <a href="https://github.com/olikraus/u8g2">here</a> and added at "Sketch > Include Library > Add .ZIP
+                                                  Library" in the Arduino IDE.</p>
+
+                                        </br/>
+
+                                        <h2>Run the code.</h2>
+                                        <p>
+                                                  The following code will display a simple "Hello World!" on your Newhaven Display. Check the comments for explanations.
+                                        </p>
+
+                                        <div class="codepreview"><pre class="prettyprint linenums"><code class="ppcode">//Include the U8g2 library
+#include &lt;U8g2lib.h&gt;
+#include &lt;U8x8lib.h&gt;
+
+/*Those are the pins the Arduino connects to the display with.
+ * Find more details regarding the pins: http://www.newhavendisplay.com/specs/NHD-C12864A1Z-FSB-FBW-HTT.pdf
+ */
+#define LCD_SERIAL_CLOCK_PIN 10
+#define LCD_SERIAL_DATA_PIN 9
+#define LCD_REGISTER_SELECT_PIN 8
+#define LCD_RESET_PIN 7
+#define LCD_CHIP_SELECT_PIN 6
 
 
-                              <font color="#95a5a6">/*The U8g2 library requires a display object. in this case, it's called "u8g2".</font>
-                              <font color="#95a5a6"> * For more information on how to use the library: </font><u><font color="#95a5a6">https://github.com/olikraus/u8g2/wiki/setup_tutorial</font></u><font color="#95a5a6"></font>
-                              <font color="#95a5a6"> */</font>
-                              <font color="#000000">U8G2_ST7565_NHD_C12864_F_4W_SW_SPI</font> <font color="#000000">u8g2</font><font color="#000000">(</font><font color="#000000">U8G2_R0</font><font color="#434f54">,</font> <font color="#000000">LCD_SERIAL_CLOCK_PIN</font><font color="#434f54">,</font> <font color="#000000">LCD_SERIAL_DATA_PIN</font><font color="#434f54">,</font> <font color="#000000">LCD_CHIP_SELECT_PIN</font><font color="#434f54">,</font> <font color="#000000">LCD_REGISTER_SELECT_PIN</font><font color="#434f54">,</font> <font color="#000000">LCD_RESET_PIN</font><font color="#000000">)</font><font color="#000000">;</font>
+/*The U8g2 library requires a display object. in this case, it's called "u8g2".
+ * For more information on how to use the library: https://github.com/olikraus/u8g2/wiki/setup_tutorial
+ */
+U8G2_ST7565_NHD_C12864_F_4W_SW_SPI u8g2(U8G2_R0, LCD_SERIAL_CLOCK_PIN, LCD_SERIAL_DATA_PIN, LCD_CHIP_SELECT_PIN, LCD_REGISTER_SELECT_PIN, LCD_RESET_PIN);
 
-                              <font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
-                               &nbsp;<font color="#434f54">//Start the lcd communication</font>
-                               &nbsp;<font color="#000000">u8g2</font><font color="#434f54">.</font><font color="#d35400">begin</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
-                              <font color="#000000">}</font>
+void setup() {
+  //Start the lcd communication
+  u8g2.begin();
+}
 
-                              <font color="#00979c">void</font> <font color="#5e6d03">loop</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
-                               &nbsp;<font color="#434f54">//Shows the text</font>
-                               &nbsp;<font color="#000000">u8g2</font><font color="#434f54">.</font><font color="#000000">firstPage</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
-                               &nbsp;
-                               &nbsp;<font color="#5e6d03">do</font> <font color="#000000">{</font>
-                               &nbsp;&nbsp;&nbsp;<font color="#95a5a6">/*Sets the font. </font>
-                              <font color="#95a5a6"> &nbsp;&nbsp;&nbsp;&nbsp;* List of all the fonts: </font><u><font color="#95a5a6">https://github.com/olikraus/u8g2/wiki/fntlistall#all-u8g2-fonts-capital-a-height</font></u><font color="#95a5a6"></font>
-                              <font color="#95a5a6"> &nbsp;&nbsp;&nbsp;&nbsp;*/</font>
-                               &nbsp;&nbsp;&nbsp;<font color="#000000">u8g2</font><font color="#434f54">.</font><font color="#000000">setFont</font><font color="#000000">(</font><font color="#000000">u8g2_font_ncenB14_tr</font><font color="#000000">)</font><font color="#000000">;</font>
-                               &nbsp;&nbsp;&nbsp;
-                               &nbsp;&nbsp;&nbsp;<font color="#434f54">//Draws a string at position X = 0 and Y = 24. Play around with the text!</font>
-                               &nbsp;&nbsp;&nbsp;<font color="#000000">u8g2</font><font color="#434f54">.</font><font color="#000000">drawStr</font><font color="#000000">(</font><font color="#000000">0</font><font color="#434f54">,</font> <font color="#000000">24</font><font color="#434f54">,</font> <font color="#005c5f">"Hello World!"</font><font color="#000000">)</font><font color="#000000">;</font>
-                               &nbsp;<font color="#000000">}</font> <font color="#5e6d03">while</font> <font color="#000000">(</font> <font color="#000000">u8g2</font><font color="#434f54">.</font><font color="#000000">nextPage</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">)</font><font color="#000000">;</font>
-                              <font color="#000000">}</font>
-                              </code>
-                              </pre>
-                              <a class="downloadbutton" href="../../downloads/2017/arduino_sketches/NHD-C12864A1ZFSBFBWH.zip">Download <span>Source</span></a>
-                              </br/><br />
-                              <p>
-                                        That's it! You're all set to have a lot of fun with your display.
-                              </p><br/>
-                              <div class="picture round author" style="background-image: url('../../images/resources/profile.png')"></div>
-                              <p class="name">— Noah Horlacher</p><br />
-                              <p class="date">
-                                        Posted on 5 October, 2017
-                              </p><br /><br />
-                    </p>
+void loop() {
+  //Shows the text
+  u8g2.firstPage();
 
-                    <a class="showall" href="../all.html">Show all posts →</a>
-          </section>
+  do {
+    /*Sets the font.
+     * List of all the fonts: https://github.com/olikraus/u8g2/wiki/fntlistall#all-u8g2-fonts-capital-a-height
+     */
+    u8g2.setFont(u8g2_font_ncenB14_tr);
 
-          <script src="../../js/header.js"></script>
-          <script src="../../js/prettyprint.js"></script>
-          <link rel="stylesheet" href="../..//js/highlight/styles/default.css">
-          <script src="../..//js/highlight/highlight.pack.js"></script>
-          <script>
-                    hljs.initHighlightingOnLoad();
-          </script>
+    //Draws a string at position X = 0 and Y = 24. Play around with the text!
+    u8g2.drawStr(0, 24, "Hello World!");
+  } while ( u8g2.nextPage() );
+}
+                                        </code></pre></div>
+
+                                        <a class="downloadbutton round" href="../../downloads/2017/arduino_sketches/NHD-C12864A1ZFSBFBWH.zip">Download Source</a>
+
+                                        </br/><br />
+                                        <p class="ending">
+                                                  That's it! You're all set to have a lot of fun with your display.
+                                        </p><br/>
+                                        <div class="postsome"><a class="some" href="http://www.facebook.com/sharer.php?u=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a><a href="whatsapp://send?text=I saw this and thought of you!"
+                                                            class="some" data-action="share/whatsapp/share"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a><a class="msngrlnk some" href=”fb-messenger://share/?link=h ttps%3A%2F%2Fkuromarumusic.github.io%2Fposts%2F2017%2Fnhd-arduino.html&app_id=123456789”><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2485 2500" style="enable-background:new 0 0 2485 2500;" xml:space="preserve"><path d="M1942.5,0h-1400C242.9,0,0,242.9,0,542.5v1415C0,2257.1,242.9,2500,542.5,2500h1400c299.6,0,542.5-242.9,542.5-542.5v-1415 C2485,242.9,2242.1,0,1942.5,0z M1366,1558.6l-316.4-339.5l-617.3,339.5l679-725.3l324.1,339.5L2045,833.3L1366,1558.6z"/></svg></a>
+                                                  <a href="https://plus.google.com/share?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html" class="some" target="_blank"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
+                                                  <a class="some" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                                                  <a class="some" href="http://reddit.com/submit?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html&amp;title=Connect Newhaven Display to Arduino" target="_blank"><i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i></a>
+                                                  <a
+                                                            class="some" href="http://www.tumblr.com/share/link?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html&amp;title=Connect Newhaven Display to Arduino" target="_blank"><i class="fa fa-tumblr-square fa-2x" aria-hidden="true"></i></a><a class="some" href="https://twitter.com/share?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html&amp;text=Connect Newhaven Display to Arduino #kuromarumusic"
+                                                                      target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a><a class="some" href="mailto:?Subject=Blog&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20"><i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i></a>
+                                                            <a class="some" href="javascript:;" onclick="window.print()"><i class="fa fa-print fa-2x" aria-hidden="true"></i></a>
+                                        </div>
+                              </p>
+                              <br />
+                              <br />
+                              <div class="showallcont">
+                                        <a class="showall" href="../all.html">Show all posts →</a>
+                              </div>
+                    </section>
+
+                    <script src="../../js/header.js"></script>
+          </div>
 </body>
 
 </html>
