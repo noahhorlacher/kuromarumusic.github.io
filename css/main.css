@@ -50,10 +50,11 @@ a:hover, ul a:hover, li a:hover {
           right: 2.5em;
           width: 2.5em;
           height: 2.5em;
-          background-color: #5A00A3;
-          background-position: center;
-          background-size: 90%;
-          background-repeat: no-repeat;
+          background: #7000a0;
+          background: -moz-linear-gradient(left, #7000a0 0%, #5a00a3 100%);
+          background: -webkit-linear-gradient(left, #7000a0 0%, #5a00a3 100%);
+          background: linear-gradient(to right, #7000a0 0%, #5a00a3 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7000a0', endColorstr='#5a00a3', GradientType=1);
           transition: bottom 1s, opacity 0.5s;
           border-radius: 5px;
           z-index: 0;
@@ -70,11 +71,24 @@ a:hover, ul a:hover, li a:hover {
           opacity: 1;
 }
 
-nav {
-          z-index: 1;
+#arrowup{
+          background-position: center;
+          background-size: 90%;
+          background-repeat: no-repeat;
+          background-image: url('../images/resources/backtotop.svg');
           width: 100%;
+          height: 100%;
+}
+
+nav {
+          display: block;
+          z-index: 1;
           padding: 1em 1em;
-          background-color: rgb(90, 0, 163);
+          background: #7000a0;
+          background: -moz-linear-gradient(left, #7000a0 0%, #5a00a3 100%);
+          background: -webkit-linear-gradient(left, #7000a0 0%, #5a00a3 100%);
+          background: linear-gradient(to right, #7000a0 0%, #5a00a3 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7000a0', endColorstr='#5a00a3', GradientType=1);
           text-align: center;
           -webkit-box-shadow: 0px 2px 20px 0px rgba(90, 0, 163, 0.08);
           -moz-box-shadow: 0px 2px 20px 0px rgba(90, 0, 163, 0.08);
@@ -83,17 +97,16 @@ nav {
           transition: opacity 0.5s, width 0.5s, height 0.5s, left 0.5s, top 0.5s;
 }
 
-
-nav a .logo {
-          height: 3em;
+nav a{
+          display: inline-block;
+          height: 4em;
           width: 100%;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
 }
 
-nav a .logo:hover {
 
+nav a .logo {
+          height: 4em;
+          width: 4em;
 }
 
 section {
