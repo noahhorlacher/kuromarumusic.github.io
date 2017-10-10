@@ -14,32 +14,70 @@
 <body>
           <div id="wrapper">
 
-                    <div id="backtotop" class="" ><div id="arrowup"></div></div>
+                    <div id="backtotop" class="">
+                              <div id="arrowup"></div>
+                    </div>
 
-                    <nav id="navigation" class="">
-                              <a href="../../index.html">
-                                        <img class="logo" src="../../images/resources/logo_line.svg" />
+                    <header>
+                              <nav id="navigation" class="">
+                                        <div class="logoCont">
+                                                  <a class="logolink" href="../../index.html">
+                                                            <svg version="1.1" id="logosvg" class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                            	 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+                                                            <style type="text/css">
+                                                            	.st0{fill:#FFFFFF;}
+                                                            	.st1{fill:none;}
+                                                            </style>
+                                                            <g>
+                                                            	<path class="st0" d="M773.3,66.5c25.6,84.6,22.5,178.3,22.5,179.4l-0.1,2.2l0.2,2.2c4.2,59.3,12.6,227,0.6,289.6
+                                                            		c-3.4,17.8-12.9,54.5-28.6,99.4c-12.8,36.6-34.3,91.6-63.9,145.8c-29.6,54-61.1,96.4-93.9,126.1c-17.7,16-35.8,28.3-53.8,36.4
+                                                            		c-18.7,8.5-37.1,12.6-56.2,12.6c-19.1,0-37.5-4.1-56.2-12.6c-18-8.1-36.1-20.4-53.8-36.4c-32.7-29.6-64.3-72-93.9-126.1
+                                                            		c-29.7-54.2-51.1-109.2-63.9-145.8c-15.7-44.9-25.3-81.6-28.6-99.4c-12-62.5-3.6-230.3,0.6-289.6l0.2-2.2l-0.1-2.2
+                                                            		c0-0.3-1.2-33.8,3.4-79.5c3.8-36.8,10.2-70.5,19.1-99.9c8.1,7.5,17,16.2,26.2,25.8c45.3,47.2,77.4,96.3,92.9,141.9l12.7,39.7
+                                                            		l38.7-14.9c2.7-0.9,36.6-11.5,102.7-11.8c66.1,0.4,100,10.9,102.7,11.8l38,14.7l13.4-39.4c15.5-45.6,47.7-94.7,92.9-141.9
+                                                            		C756.2,82.7,765.2,74,773.3,66.5 M790.2,0c0,0-131.1,95.3-174,221.3c0,0-37.8-13.8-116.2-14.2c-78.5,0.4-116.2,14.2-116.2,14.2
+                                                            		C340.9,95.3,209.8,0,209.8,0c-51.2,103-45.6,247.4-45.6,247.4s-15.6,218.5,0,300S294.9,1000,500,1000s320.2-371.2,335.7-452.7
+                                                            		s0-300,0-300S841.4,103,790.2,0L790.2,0z"/>
+                                                            </g>
+                                                            <g>
+                                                            	<path class="st1" d="M835.7,247.4c0,0,5.6-144.4-45.6-247.4c0,0-131.1,95.3-174,221.3c0,0-37.8-13.8-116.2-14.2
+                                                            		c-78.5,0.4-116.2,14.2-116.2,14.2C340.9,95.3,209.8,0,209.8,0c-51.2,103-45.6,247.4-45.6,247.4s-15.6,218.5,0,300
+                                                            		S294.9,1000,500,1000s320.2-371.2,335.7-452.7S835.7,247.4,835.7,247.4z"/>
+                                                            </g>
+                                                            </svg>
                               </a>
-                    </nav>
+                                        </div>
+
+                                        <div class="navlinks">
+                                                  <a class="navlink" href="../../index.html">Home</a
+                                                            ><a class="navlink" href="../../posts/all.html">All Posts</a>
+                                        </div>
+
+                              </nav>
+                    </header>
 
                     <section class="fullpost">
                               <h1 class="title"><span>How to connect a NHD C12864A1ZFSBFBWH to an Arduino<span></h1>
+
                               <p class="metadata">
                                         Noah Horlacher, 5 October 2017
                               </p>
+
                               <p class="bodycopy">
                                         I bought a Newhaven Display (C12864A1ZFSBFBWH) for my Arduino and had no idea how to connect and program it.<br /> The <a href="http://www.mouser.com/ds/2/291/NHD-C12864A1Z-FSB-FBW-HTT-49877.pdf">datasheet</a> did
                                         only offer technical information, but no tutorial whatsoever.<br /> So here it is: <strong>How to connect a NHD C12864A1ZFSBFBWH to an Arduino.</strong>
                               </p>
-                              <div class="thumbnail round" style="background-image: url('../../images/thumbnails/posts/2017/nhd-arduino-thumbnail.jpg')">
-                                        <p class="caption">In this tutorial, you'll learn how to connect a <strong>Newhaven Display C12864A1ZFSBFBWH</strong> to an Arduino and display a simple "Hello World!".</p>
-                              </div>
-                              <br />
+
+                              <figure class="postpicture round">
+                                        <img src="../../images/thumbnails/posts/2017/nhd-arduino-thumbnail.jpg" alt="NHD C12864A1ZFSBFBWH Tutorial" />
+                                        <figcaption>In this tutorial, you'll learn how to connect a <strong>Newhaven Display C12864A1ZFSBFBWH</strong> to an Arduino and display a simple "Hello World!".</figcaption>
+                              </figure>
+
+                              <hr />
 
                               <p class="post">
 
-                                        You'll need:<br/>
-
+                                        <h2>You'll need:</h2>
                                         <div class="centerlist">
                                                   <ul>
                                                             <li>
@@ -80,10 +118,11 @@
 
                                         <h2>Install the library.</h2>
                                         <p>
-                                                  Inside the Arduino IDE, go to Sketch > Include Library > Manage Libraries...<br /> A window will pop up. Click the search bar and search for "U8g2". <strong><br />
-                                        Select the newest version and click on "Install".</strong><br /> Alternatively, the library can be downloaded <a href="https://github.com/olikraus/u8g2">here</a> and added at "Sketch > Include Library > Add .ZIP
-                                                  Library" in the Arduino IDE.</p>
+                                                  Inside the Arduino IDE, go to Sketch > Include Library > Manage Libraries...<br /> A window will pop up. Click the search bar and search for "U8g2". <strong><br /><br />
 
+                                        Select the newest version and click on "Install".</strong>
+                                                  <br />
+                                                  <br /> Alternatively, the library can be downloaded <a href="https://github.com/olikraus/u8g2">here</a> and added at "Sketch > Include Library > Add .ZIP Library" in the Arduino IDE.</p>
                                         </br/>
 
                                         <h2>Run the code.</h2>
@@ -137,26 +176,81 @@ void loop() {
                                         <p class="ending">
                                                   That's it! You're all set to have a lot of fun with your display.
                                         </p><br/>
-                                        <div class="postsome"><a class="some" href="http://www.facebook.com/sharer.php?u=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a><a href="whatsapp://send?text=I saw this and thought of you!"
-                                                            class="some" data-action="share/whatsapp/share"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a><a class="msngrlnk some" href="fb-messenger://share/?link=h ttps%3A%2F%2Fkuromarumusic.github.io%2Fposts%2F2017%2Fnhd-arduino.html&app_id=123456789"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2485 2500" style="enable-background:new 0 0 2485 2500;" xml:space="preserve"><path d="M1942.5,0h-1400C242.9,0,0,242.9,0,542.5v1415C0,2257.1,242.9,2500,542.5,2500h1400c299.6,0,542.5-242.9,542.5-542.5v-1415 C2485,242.9,2242.1,0,1942.5,0z M1366,1558.6l-316.4-339.5l-617.3,339.5l679-725.3l324.1,339.5L2045,833.3L1366,1558.6z"/></svg></a>
-                                                  <a href="https://plus.google.com/share?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html" class="some" target="_blank"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
-                                                  <a class="some" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                                  <a class="some" href="http://reddit.com/submit?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html&amp;title=Connect Newhaven Display to Arduino" target="_blank"><i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i></a>
-                                                  <a
-                                                            class="some" href="http://www.tumblr.com/share/link?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html&amp;title=Connect Newhaven Display to Arduino" target="_blank"><i class="fa fa-tumblr-square fa-2x" aria-hidden="true"></i></a><a class="some" href="https://twitter.com/share?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html&amp;text=Connect Newhaven Display to Arduino #kuromarumusic"
-                                                                      target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a><a class="some" href="mailto:?Subject=Blog&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20"><i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i></a>
-                                                            <a class="some" href="javascript:;" onclick="window.print()"><i class="fa fa-print fa-2x" aria-hidden="true"></i></a>
-                                        </div>
-                              </p>
-                              <br />
-                              <br />
-                              <div class="showallcont">
-                                        <a class="showall" href="../all.html">Show all posts →</a>
-                              </div>
-                    </section>
+                                        <div class="postsome">
+                                                  <p>
+                                                            Share this article:
+                                                  </p>
+                                                  <a class="some" href="http://www.facebook.com/sharer.php?u=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i
+                                                            ></a
 
-                    <script src="../../js/header.js"></script>
+                                                  ><a href="whatsapp://send?text=I saw this and thought of you!" class="some mobileonly" data-action="share/whatsapp/share"
+                                                  ><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i
+                                                            ></a
+
+                                                  ><a class="msngrlnk some mobileonly" href="fb-messenger://share/?link=h ttps%3A%2F%2Fkuromarumusic.github.io%2Fposts%2F2017%2Fnhd-arduino.html&app_id=123456789"
+                                                  ><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2485 2500" style="enable-background:new 0 0 2485 2500;" xml:space="preserve"><path d="M1942.5,0h-1400C242.9,0,0,242.9,0,542.5v1415C0,2257.1,242.9,2500,542.5,2500h1400c299.6,0,542.5-242.9,542.5-542.5v-1415 C2485,242.9,2242.1,0,1942.5,0z M1366,1558.6l-316.4-339.5l-617.3,339.5l679-725.3l324.1,339.5L2045,833.3L1366,1558.6z"/></svg></a
+
+                                                  ><a href="https://plus.google.com/share?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html" class="some" target="_blank"
+                                                  ><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i
+                                                            ></a
+
+                                                  ><a class="some" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html" target="_blank"
+                                                  ><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i
+                                                            ></a
+
+                                                  ><a class="some" href="http://reddit.com/submit?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html&amp;title=Connect Newhaven Display to Arduino" target="_blank"
+                                                  ><i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i
+                                                            ></a
+
+                                                  ><a class="some" href="http://www.tumblr.com/share/link?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html&amp;title=Connect Newhaven Display to Arduino" target="_blank"
+                                                  ><i class="fa fa-tumblr-square fa-2x" aria-hidden="true"></i
+                                                            ></a
+
+                                                  ><a class="some" href="https://twitter.com/share?url=https://kuromarumusic.github.io/posts/2017/nhd-arduino.html&amp;text=Connect Newhaven Display to Arduino #kuromarumusic" target="_blank"
+                                                  ><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i
+                                                  ></a
+
+                                                  ><a class="some" href="mailto:?Subject=Blog&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20"
+                                                  ><i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i
+                                                            ></a
+
+                                                  ><a class="some" href="javascript:;" onclick="window.print()"
+                                                  ><i class="fa fa-print fa-2x" aria-hidden="true"></i
+                                                  ></a>
+                                        </div>
+                                        <br />
+                                        <br />
+                                        <div class="showallcont">
+                                                  <a class="showall" href="../all.html">Show all posts →</a>
+                                        </div>
+                    </section>
           </div>
+
+          <footer>
+                              <a href="http://bit.ly/kuromaruYT" class="some"><i
+                                        class="fa fa-youtube fa-2x" aria-hidden="true"></i
+                              ></a
+
+                              ><a href="http://bit.ly/kuromaruSC" class="some"><i
+                                        class="fa fa-soundcloud fa-2x" aria-hidden="true"></i
+                    ></a
+
+                    ><a href="http://bit.ly/kuromaruIG" class="some"><i
+                              class="fa fa-instagram fa-2x" aria-hidden="true"></i
+                    ></a
+
+                    ><a href="http://bit.ly/kuromaruSN" class="some"><i
+                              class="fa fa-snapchat fa-2x" aria-hidden="true"></i
+                    ></a
+
+                    ><a href="http://bit.ly/kuromaruGH" class="some"><i
+                              class="fa fa-github fa-2x" aria-hidden="true"></i
+                    ></a
+
+          >
+          </footer>
+
+          <script src="../../js/header.js"></script>
 </body>
 
 </html>

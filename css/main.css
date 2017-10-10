@@ -11,7 +11,7 @@ body {
           background-color: rgb(250, 250, 250);
 }
 
-#wrapper{
+#wrapper {
           background-color: rgb(250, 250, 250);
 }
 
@@ -21,14 +21,13 @@ h1, .title {
           text-align: center;
 }
 
-
 h2, .subtitle {
           font-family: 'Encode Sans Expanded', sans-serif;
           font-size: 1em;
           text-align: center;
 }
 
-p, ul, li, center {
+p, ul, li, center, figcaption {
           font-family: 'Encode Sans Expanded', sans-serif;
 }
 
@@ -44,7 +43,7 @@ a:hover, ul a:hover, li a:hover {
           text-decoration: underline;
 }
 
-#backtotop{
+#backtotop {
           position: fixed;
           bottom: calc(100% + 2.5em);
           right: 2.5em;
@@ -58,20 +57,23 @@ a:hover, ul a:hover, li a:hover {
           transition: bottom 1s, opacity 0.5s;
           border-radius: 5px;
           z-index: 0;
-          opacity: 0.6;
+          opacity: 0.87;
+          -webkit-box-shadow: 0px 2px 5px 0px rgba(90,0,163,0.29);
+-moz-box-shadow: 0px 2px 5px 0px rgba(90,0,163,0.29);
+box-shadow: 0px 2px 5px 0px rgba(90,0,163,0.29);
 }
 
-#backtotop.notontop{
+#backtotop.notontop {
           bottom: 2.5em;
           right: 2.5em;
           cursor: pointer;
 }
 
-#backtotop.notontop:hover{
+#backtotop.notontop:hover {
           opacity: 1;
 }
 
-#arrowup{
+#arrowup {
           background-position: center;
           background-size: 90%;
           background-repeat: no-repeat;
@@ -82,31 +84,72 @@ a:hover, ul a:hover, li a:hover {
 
 nav {
           display: block;
-          z-index: 1;
-          padding: 1em 1em;
+          padding: 1em 3em;
           background: #7000a0;
           background: -moz-linear-gradient(left, #7000a0 0%, #5a00a3 100%);
           background: -webkit-linear-gradient(left, #7000a0 0%, #5a00a3 100%);
           background: linear-gradient(to right, #7000a0 0%, #5a00a3 100%);
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7000a0', endColorstr='#5a00a3', GradientType=1);
-          text-align: center;
-          -webkit-box-shadow: 0px 2px 20px 0px rgba(90, 0, 163, 0.08);
-          -moz-box-shadow: 0px 2px 20px 0px rgba(90, 0, 163, 0.08);
-          box-shadow: 0px 2px 20px 0px rgba(90, 0, 163, 0.08);
           opacity: 1;
           transition: opacity 0.5s, width 0.5s, height 0.5s, left 0.5s, top 0.5s;
+          position: relative;
+          height: 4em;
+          -webkit-box-shadow: 0px 3px 11px 0px rgba(90, 0, 163, 0.3);
+          -moz-box-shadow: 0px 3px 11px 0px rgba(90, 0, 163, 0.3);
+          box-shadow: 0px 3px 11px 0px rgba(90, 0, 163, 0.3);
 }
 
-nav a{
+nav .logoCont {
+          text-align: left;
           display: inline-block;
-          height: 4em;
-          width: 100%;
+          height: 2em;
 }
 
+nav .logolink {
+          display: inline-block;
+          height: 2em;
+}
 
-nav a .logo {
-          height: 4em;
-          width: 4em;
+nav .logolink .logo {
+          height: 2em;
+          width: 2em;
+}
+
+nav .navlinks {
+          display: inline-block;
+          text-align: right;
+          position: absolute;
+          right: 3em;
+          top: 1.5em;
+}
+
+nav .logolink .logo .st1{
+          fill: transparent;
+          transition: fill 0.5s;
+}
+
+nav .logolink:hover .logo .st1{
+          fill: white;
+}
+
+.st0{fill:#FFFFFF;}
+
+nav .navlink {
+          padding: 0.5em;
+          margin-right: 0.5em;
+          color: rgb(250, 250, 250);
+          background-color: transparent;
+          opacity: 0.87;
+          transition: opacity 0.5s, background-color 0.5s, color 0.5s;
+          font-weight: 100;
+          border-radius: 5px;
+}
+
+nav .navlink:hover, nav .navlink.active {
+          opacity: 1;
+          background-color: rgb(250, 250, 250);
+          text-decoration: none;
+          color: #5A00A3;
 }
 
 section {
@@ -140,16 +183,17 @@ section {
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-          padding: 2em 10%;
+          padding: 4em 10%;
           border-radius: 5px;
 }
 
 .shortpost .title {
           margin-top: 0;
+          font-size: 1.2em;
 }
 
 .shortpost .subtitle {
-          font-size: 1em;
+          font-size: 0.8em;
           margin-bottom: 0;
 }
 
@@ -252,7 +296,7 @@ section {
           opacity: 1;
 }
 
-.showallcont{
+.showallcont {
           width: 100%;
           text-align: center;
 }
@@ -269,7 +313,7 @@ section {
           transition: opacity 0.5s;
 }
 
-.showall:hover{
+.showall:hover {
           text-decoration: none;
           opacity: 1;
 }
@@ -279,7 +323,15 @@ section {
           text-align: center;
 }
 
+.allposts {
+          padding-top: 4em;
+}
+
 .fullpost {
+          padding-top: 4em;
+}
+
+.aboutme {
           padding-top: 4em;
 }
 
@@ -291,7 +343,7 @@ section {
           position: relative;
 }
 
-.fullpost .title, .fullpost .subtitle, .fullpost h1, .fullpost h2{
+.fullpost .title, .fullpost .subtitle, .fullpost h1, .fullpost h2 {
           text-align: left;
 }
 
@@ -309,7 +361,7 @@ section {
           display: inline-block;
 }
 
-.codepreview{
+.codepreview {
           overflow: hidden;
           border-radius: 5px;
           margin-top: 2em;
@@ -325,12 +377,11 @@ pre {
           margin: 0 auto;
 }
 
-li.L0, li.L1, li.L2, li.L3,
-li.L5, li.L6, li.L7, li.L8 {
-  list-style-type: decimal !important;
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+          list-style-type: decimal !important;
 }
 
-li.L0, li.L1, li.L2, li.L3, li.L4, Li.L5, li.L6, li.L7, li.L8, li.L9{
+li.L0, li.L1, li.L2, li.L3, li.L4, Li.L5, li.L6, li.L7, li.L8, li.L9 {
           font-size: 0.8em;
           font-family: 'Ubuntu Mono', monospace;
 }
@@ -389,7 +440,19 @@ li.L0, li.L1, li.L2, li.L3, li.L4, Li.L5, li.L6, li.L7, li.L8, li.L9{
           fill: rgb(90, 0, 163);
 }
 
-.caption {
+.postpicture {
+          position: relative;
+          width: 100%;
+          margin: 2em auto 3em auto;
+}
+
+.postpicture img {
+          width: 100%;
+          display: block;
+}
+
+.postpicture figcaption {
+          display: block;
           font-size: 0.8em;
           letter-spacing: 0.01em;
           opacity: 0.6;
@@ -403,14 +466,49 @@ li.L0, li.L1, li.L2, li.L3, li.L4, Li.L5, li.L6, li.L7, li.L8, li.L9{
           margin: 0 auto;
 }
 
-.thumbnail:hover .caption{
+.postpicture:hover figcaption {
           opacity: 1;
 }
 
-.ending{
+.ending {
           text-align: center;
 }
 
-.postsome{
+.postsome {
           text-align: center;
+}
+
+.mobileonly {
+          display: none;
+}
+
+hr {
+          height: 2px;
+          border: 0;
+          background-color: rgba(0, 0, 0, 0.2);
+          margin: 2em auto 6em auto;
+}
+
+footer {
+          text-align: center;
+          padding: 2.8em 3em 3em 3em;
+          background-color: rgba(0, 0, 0, 0.8);
+          color: rgb(250, 250, 250);
+}
+
+footer .some {
+          color: rgb(250, 250, 250);
+          opacity: 0.6;
+          transition: opacity 0.5s;
+}
+
+footer .some:hover {
+          color: rgb(250, 250, 250);
+          opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+          .mobileonly {
+                    display: inline-block;
+          }
 }
