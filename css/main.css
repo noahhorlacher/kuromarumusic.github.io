@@ -47,7 +47,7 @@ a:hover, ul a:hover, li a:hover {
 
 #backtotop {
           position: fixed;
-          bottom: calc(100% + 2.5em);
+          bottom: -2.5em;
           right: 2.5em;
           width: 2.5em;
           height: 2.5em;
@@ -564,6 +564,18 @@ strong {
           color: #ffcc00;
 }
 
+.gradientThree{
+          background: #6551ff;
+background: -moz-linear-gradient(left, #6551ff 0%, #2e37f2 100%);
+background: -webkit-linear-gradient(left, #6551ff 0%,#2e37f2 100%);
+background: linear-gradient(to right, #6551ff 0%,#2e37f2 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6551ff', endColorstr='#2e37f2',GradientType=1 );
+}
+
+.gradientThree .progressBar {
+          color: #6551ff;
+}
+
 .progress {
           border-style: solid;
           border-color: white;
@@ -659,10 +671,14 @@ strong {
           .printinfo {
                     display: none !important;
           }
+
+          .allposts{
+                    min-height: calc(100vh - 11.8em) !important;
+          }
 }
 
 @media print {
-          header, .downloadbutton, .postsome, .showall, footer, #backtotop {
+          header, .downloadbutton, .postsome, .showall, footer, #backtotop, .mailbtn, .current {
                     display: none;
           }
           .postpicture figcaption {
@@ -701,5 +717,17 @@ strong {
           }
           .newest {
                     display: none !important;
+          }
+
+          .progress{
+                    width: auto;
+                    display: block;
+          }
+
+          .progressBar {
+                    color: black !important;
+                    width: auto !important;
+                    border: 0 !important;
+                    background-color: transparent !important;
           }
 }
