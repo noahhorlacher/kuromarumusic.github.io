@@ -19,7 +19,7 @@ h1, .title {
           font-family: 'Ubuntu Mono', monospace;
           font-size: 2em;
           text-align: center;
-              letter-spacing: 0.04em;
+          letter-spacing: 0.04em;
 }
 
 h2, .subtitle {
@@ -219,7 +219,7 @@ section {
           width: 12.5%;
 }
 
-.profilepic{
+.profilepic {
           width: 15em;
           height: 15em;
           margin: 0 auto;
@@ -521,50 +521,50 @@ footer .some:hover {
           opacity: 1;
 }
 
-.disabled{
+.disabled {
           cursor: default;
           transform: scale(1);
           opacity: 1;
 }
 
-.disabled h3{
+.disabled h3 {
           font-weight: 100;
 }
 
-.disabled .title{
+.disabled .title {
           font-size: 1.5em;
           font-weight: 900;
 }
 
-strong{
+strong {
           font-weight: 900 !important;
 }
 
-.gradientOne{
+.gradientOne {
           background: #00ff77;
           background: -moz-linear-gradient(left, #00ff77 0%, #00ff4c 100%);
-          background: -webkit-linear-gradient(left, #00ff77 0%,#00ff4c 100%);
-          background: linear-gradient(to right, #00ff77 0%,#00ff4c 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff77', endColorstr='#00ff4c',GradientType=1 );
+          background: -webkit-linear-gradient(left, #00ff77 0%, #00ff4c 100%);
+          background: linear-gradient(to right, #00ff77 0%, #00ff4c 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff77', endColorstr='#00ff4c', GradientType=1);
 }
 
-.gradientOne .progressBar{
+.gradientOne .progressBar {
           color: #00ff77;
 }
 
-.gradientTwo{
+.gradientTwo {
           background: #ffcc00;
           background: -moz-linear-gradient(left, #ffcc00 0%, #ffa400 100%);
-          background: -webkit-linear-gradient(left, #ffcc00 0%,#ffa400 100%);
-          background: linear-gradient(to right, #ffcc00 0%,#ffa400 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc00', endColorstr='#ffa400',GradientType=1 );
+          background: -webkit-linear-gradient(left, #ffcc00 0%, #ffa400 100%);
+          background: linear-gradient(to right, #ffcc00 0%, #ffa400 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc00', endColorstr='#ffa400', GradientType=1);
 }
 
-.gradientTwo .progressBar{
+.gradientTwo .progressBar {
           color: #ffcc00;
 }
 
-.progress{
+.progress {
           border-style: solid;
           border-color: white;
           border-radius: 5px;
@@ -576,12 +576,12 @@ strong{
           font-weight: 100;
 }
 
-.progressBar{
+.progressBar {
           padding: 0.3em 0;
           background-color: white;
 }
 
-.prio{
+.prio {
           position: absolute;
           top: 2em;
           right: 3em;
@@ -598,11 +598,43 @@ strong{
           vertical-align: middle;
 }
 
+.mailbtn {
+          text-align: center;
+          display: block;
+          margin-top: 2em;
+}
+
+.mailbtn a {
+          font-size: 1em;
+          opacity: 0.6;
+          border-style: solid;
+          border-width: 2px;
+          border-color: #ffa400;
+          background-color: transparent;
+          color: #ffa400;
+          border-radius: 5px;
+          padding: 0.5em 1.5em;
+          -webkit-box-shadow: 0px 2px 5px 0px rgba(255, 164, 0, 0);
+          -moz-box-shadow: 0px 2px 5px 0px rgba(255, 164, 0, 0);
+          box-shadow: 0px 2px 5px 0px rgba(255, 164, 0, 0);
+          transition: opacity 0.5s, color 0.5s, background-color 0.5s, -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s, box-shadow 0.5s;
+}
+
+.mailbtn a:hover {
+          text-decoration: none;
+          opacity: 1;
+          color: rgb(250, 250, 250);
+          background-color: #ffa400;
+          -webkit-box-shadow: 0px 2px 5px 0px rgba(255, 164, 0, 0.29);
+          -moz-box-shadow: 0px 2px 5px 0px rgba(255, 164, 0, 0.29);
+          box-shadow: 0px 2px 5px 0px rgba(255, 164, 0, 0.29);
+}
+
 @media screen and (max-width: 470px) {
-          .logoCont{
+          .logoCont {
                     display: none !important;
           }
-          .navlinks{
+          .navlinks {
                     display: inline-block;
                     text-align: center !important;
                     top: calc(50% - 0.5em) !important;
@@ -617,15 +649,14 @@ strong{
           .mobileonly {
                     display: inline-block;
           }
-
-          section{
+          section {
                     padding-left: 5%;
                     padding-right: 5%;
           }
 }
 
-@media screen{
-          .printinfo{
+@media screen {
+          .printinfo {
                     display: none !important;
           }
 }
@@ -645,38 +676,30 @@ strong{
                     white-space: pre-wrap;
                     background-color: white !important;
           }
-
-          section{
+          section {
                     padding: 0;
           }
-
-          section h1.title:first-of-type{
+          section h1.title:first-of-type {
                     margin-top: 0;
           }
-
-          body{
+          body {
                     overflow: visible;
                     background-color: white;
           }
-
-          #wrapper{
+          #wrapper {
                     background-color: white;
           }
-
-          hr{
+          hr {
                     margin: 1em auto 2em auto;
           }
-
-          .profilepic{
+          .profilepic {
                     margin: 0 auto 2em auto;
           }
-
-          .printinfo{
+          .printinfo {
                     display: block !important;
                     text-align: center;
           }
-
-          .newest{
+          .newest {
                     display: none !important;
           }
 }
