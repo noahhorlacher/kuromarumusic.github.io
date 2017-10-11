@@ -162,6 +162,7 @@ section {
           text-align: left;
           padding: 2em 10%;
           max-width: 1000px;
+          transition: padding;
 }
 
 .shortpost {
@@ -219,8 +220,8 @@ section {
 }
 
 .profilepic{
-          width: 16em;
-          height: 16em;
+          width: 15em;
+          height: 15em;
           margin: 0 auto;
           display: block;
 }
@@ -597,9 +598,29 @@ strong{
           vertical-align: middle;
 }
 
+@media screen and (max-width: 470px) {
+          .logoCont{
+                    display: none !important;
+          }
+          .navlinks{
+                    display: inline-block;
+                    text-align: center !important;
+                    top: calc(50% - 0.5em) !important;
+                    left: 0 !important;
+                    width: 100%;
+                    height: calc(50% - 0.5em);
+                    font-size: 1em !important;
+          }
+}
+
 @media screen and (max-width: 900px) {
           .mobileonly {
                     display: inline-block;
+          }
+
+          section{
+                    padding-left: 5%;
+                    padding-right: 5%;
           }
 }
 
