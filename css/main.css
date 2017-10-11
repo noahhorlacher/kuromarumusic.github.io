@@ -19,6 +19,7 @@ h1, .title {
           font-family: 'Ubuntu Mono', monospace;
           font-size: 2em;
           text-align: center;
+              letter-spacing: 0.04em;
 }
 
 h2, .subtitle {
@@ -58,9 +59,9 @@ a:hover, ul a:hover, li a:hover {
           border-radius: 5px;
           z-index: 2;
           opacity: 0.87;
-          -webkit-box-shadow: 0px 2px 5px 0px rgba(90,0,163,0.29);
--moz-box-shadow: 0px 2px 5px 0px rgba(90,0,163,0.29);
-box-shadow: 0px 2px 5px 0px rgba(90,0,163,0.29);
+          -webkit-box-shadow: 0px 2px 5px 0px rgba(90, 0, 163, 0.29);
+          -moz-box-shadow: 0px 2px 5px 0px rgba(90, 0, 163, 0.29);
+          box-shadow: 0px 2px 5px 0px rgba(90, 0, 163, 0.29);
 }
 
 #backtotop.notontop {
@@ -124,16 +125,18 @@ nav .navlinks {
           top: 1.5em;
 }
 
-nav .logolink .logo .st1{
+nav .logolink .logo .st1 {
           fill: transparent;
           transition: fill 0.5s;
 }
 
-nav .logolink:hover .logo .st1{
+nav .logolink:hover .logo .st1 {
           fill: white;
 }
 
-.st0{fill:#FFFFFF;}
+.st0 {
+          fill: #FFFFFF;
+}
 
 nav .navlink {
           padding: 0.5em;
@@ -212,6 +215,13 @@ section {
 
 .eighthwidth {
           width: 12.5%;
+}
+
+.profilepic{
+          width: 16em;
+          height: 16em;
+          margin: 0 auto;
+          display: block;
 }
 
 .picture {
@@ -508,8 +518,63 @@ footer .some:hover {
           opacity: 1;
 }
 
+.printinfo{
+          display: none;
+}
+
 @media screen and (max-width: 900px) {
           .mobileonly {
                     display: inline-block;
+          }
+}
+
+@media print {
+          header, .downloadbutton, .postsome, .showall, footer, #backtotop {
+                    display: none;
+          }
+          .postpicture figcaption {
+                    opacity: 0.87;
+          }
+          .prettyprint {
+                    width: auto;
+                    height: auto;
+                    overflow: visible;
+                    word-wrap: break-word !important;
+                    white-space: pre-wrap;
+                    background-color: white !important;
+          }
+
+          section{
+                    padding: 0;
+          }
+
+          section h1.title:first-of-type{
+                    margin-top: 0;
+          }
+
+          body{
+                    overflow: visible;
+                    background-color: white;
+          }
+
+          #wrapper{
+                    background-color: white;
+          }
+
+          hr{
+                    margin: 1em auto 2em auto;
+          }
+
+          .profilepic{
+                    margin: 0 auto 2em auto;
+          }
+
+          .printinfo{
+                    display: block;
+                    text-align: center;
+          }
+
+          .newest{
+                    display: none;
           }
 }
