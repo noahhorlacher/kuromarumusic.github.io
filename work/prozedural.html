@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Noah Horlacher</title>
+
+    <!--jquery-->
+    <script src="../js/lib/jquery/jquery-3.3.1.min.js"></script>
+
+    <!--main script-->
+    <script src="../js/common-components.js"></script>
+
+    <!--fonts-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900|Roboto:300,300i,400,400i,700,700i,900"
+        rel="stylesheet">
+
+    <!--css-->
+    <link rel="stylesheet" href="../css/normalize/normalize.css">
+    <link rel="stylesheet" href="../css/custom/stylesheet.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../">noah</a>
+        </nav>
+        <nav>
+            <a href="../weg.html">weg</a>
+            <a href="../work.html" class="active">work</a>
+            <a href="../vision.html">vision</a>
+        </nav>
+    </header>
+
+    <container class="breadcrumbs">
+        <a href="../work.html">work</a>&nbsp;/&nbsp;<strong>prozedural</strong>
+    </container>
+
+    <img src="">
+
+    <article class="beispiele">
+        <h1 class="title">prozedural</h1>
+        <p class="subtitle">Experimente mit prozeduralen Inhalten</p>
+        <hr class="center">
+        <p class="quote">Meine Faszination für verschiedene Kunstformen trieb mich dazu mit einer Mischung aus Kunst und
+            Programmieren zu
+            experimentieren. Oft experimentiere ich mit Perlin oder Simplex Noise und auch mit Computererzeugter Musik.
+        </p>
+
+        <grid class="img">
+            <item style="background-image: url(data/terrain.gif)">
+                <figcaption>
+                    Mit Perlin Noise erzeugte 3D-Landschaft
+                </figcaption>
+            </item>
+            <br>
+            <item style="background-image: url(data/loop.gif)">
+                <figcaption>
+                    Perlin Noise Loop
+                </figcaption>
+            </item>
+            <br>
+            <item style="background-image: url(data/flowfield.gif)">
+                <figcaption>
+                    Perlin Noise Flowfield
+                </figcaption>
+            </item>
+        </grid>
+        <hr class="center" style="margin: 4rem auto 4rem auto">
+        <p class="body center"><strong>Beispiel:</strong> Computergenerierte Musik & Visuals</p>
+        <video width="320" height="240" controls>
+            <source src="data/latenight.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video><br><br><br>
+        <p class="copy" style="margin-bottom: 1rem">Die Musik in diesem Video im Grunde durch einen eigenen und im Grunde simplen Algorithmus
+            erzeugt:</p>
+        <ol class="copy" style="margin-bottom: 4rem">
+            <li>Aus einer Liste von Tonleitern wird eine Tonleiter wie zum Beispiel «Pentatonisch Moll» ausgewählt</li>
+            <li>Aus dieser Tonleiter werden eine zufällige Anzahl Noten rausgepickt</li>
+            <li>Jede Note bekommt eine zufällige Spieldauer, so wird ein Rhythmus erzeugt</li>
+            <li>Verschiedene Drum-Rhythmen werden vordefiniert und davon wird zufällig einer gewählt.</li>
+        </ol>
+        <p class="copy">Diese Methode kann relativ einfach «zufällige» Musik erzeugen, jedoch kann es sehr einfach zu
+            willkürlich klingen und die Melodie keinen roten Faden haben. Dies würde sich z.B. durch Machine Learning oder einen statistischen Ansatz lösen lassen.<br></p>
+    </article>
+</body>
+
+</html>
