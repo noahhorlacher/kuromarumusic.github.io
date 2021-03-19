@@ -1,0 +1,49 @@
+extends template.pug
+
+block vars
+    -
+        site = "work"
+        description = "Arbeiten und Projekte von Noah Horlacher"
+
+block content
+    section#dev
+        container.title
+            h1.title work
+            p.subtitle Programmierung & Entwicklung
+            p.copy.
+                Beruflich hatte ich mich auf digitale Werbemittel und Webdesign fokussiert.
+                In der Lehre erweitere ich nun meinen Horizont mit allen Facetten der IT-Welt
+                und kann mich auf meine Passion fokussieren.
+            p.copy.
+                Ich liebe es Projekte interdisziplinär zu verknüpfen und scheue mich nicht
+                gross zu denken und neues zu versuchen.
+            hr
+
+        grid.between
+            card.invert&attributes(tiltit)
+                container
+                    h1 Werbung
+                    p.subtitle Online Werbemittel und neue Technologien
+                btn(link="work/werbung.html") anschauen
+
+            card.invert&attributes(tiltit)
+                container
+                    h1 Prozedural
+                    p.subtitle Die Kunst des Zufalls mit Perlin Noise & Co.
+                btn(link="work/prozedural.html") anschauen
+            
+            card.invert&attributes(tiltit)
+                container
+                    h1 Englisch
+                    p.subtitle Lernwebsite zur Erweiterung des Englischvokabulars
+                btn(link="work/englisch.html") anschauen
+
+        grid.around(style="margin-top: 3rem")
+            card.invert&attributes(tiltit)
+                h1 Design
+                p.subtitle Experimente & Studien
+                btn(link="work/design.html") anschauen
+            card.invert&attributes(tiltit)
+                h1 Musik
+                p.subtitle Meine musikalischen Experimente
+                btn(link="work/musik.html") anschauen

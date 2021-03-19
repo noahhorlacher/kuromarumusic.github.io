@@ -1,0 +1,49 @@
+extends ../template.pug
+
+block var
+    -
+        site='work'
+        subsite='design'
+        description='Design und Kunst von Noah Horlacher'
+
+block content
+    article.beispiele
+        h1.title design
+        p.subtitle Funktion, Form, Farbe
+        hr.center
+        p.quote.
+            Meine Faszination für Form und Farbe begann sich in meiner Lehre
+            als Interactive Media Designer zu zeigen.
+        p.copy.
+            Auch wenn ich bereits vorher animierte und designte, begann ich
+            erst ab dann die tieferen Zusammenhänge und Philosophien zu verstehen.
+            In meinem Game Art Studium in der SAE lernte ich, wie viel Arbeit
+            und Gedanken man alleine in etwas simples wie einen Stuhl stecken
+            kann. Ich habe Dinge wie Thumbnailing, Materialstudien, Formstudien
+            und Farbstudien verinnerlicht und lerne ständig dazu.
+
+        hr.center(style="margin: 4rem auto 8rem auto")
+        p.body.center(style="margin-top: 0") #[strong Beispiel:] Designstudie Composite
+        br
+        br
+        br
+        grid.img.fullsize
+            item(style="background-image: url(/work/data/moscow.svg)")
+                figcaption «Moskau» Designstudie
+            br
+            item.active(style="background-image: url(/work/data/greece.svg)")
+                figcaption «Griechenland» Designstudie
+            br
+            item(style="background-image: url(/work/data/china.svg)")
+                figcaption «China» Designstudie
+        hr.center(style="margin: 8rem auto 4rem auto")
+        p.body.center(style="margin-top: 8rem") #[strong Beispiel:] Private Logos
+        br
+        br
+        br
+        grid.img.fullsize.alt(style="margin-bottom: 6rem;")
+            item(style="background-image: url(/work/data/tyranno_1.svg)")
+            br
+            item(style="background-image: url(/work/data/kuro.svg)")
+            br
+            item(style="background-image: url(/work/data/tyranno_2.svg)")

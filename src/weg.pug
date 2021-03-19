@@ -1,0 +1,170 @@
+extends template.pug
+
+block vars
+    - site = "weg"
+    - description = "Lebenslauf von Noah Horlacher"
+
+block scripts
+    script(src="js/timeline.js")
+
+block content
+    section#weg
+        container
+            container.title
+                h1.title weg
+                p.subtitle Mein Werdegang
+
+            timeline.rounded
+                ul
+                    li.visible
+                        div
+                            time #[h2 Schule]2005-2014
+                            accordion
+                                item
+                                    btn.secondary.plus.even Details
+                                    content
+                                        p.address.
+                                            #[strong 1. & 2. Klasse]
+                                            Altes Schulhaus
+                                            Gemeindehausplatz 1
+                                            5712 Beinwil am See
+                                            
+                                            #[strong 3. - 7. Klasse]
+                                            Schulhaus Steineggli
+                                            Kirchstrasse 21
+                                            5712 Beinwil am See
+
+                                            #[strong 8. & 9. Klasse]
+                                            KS Homberg
+                                            Aarauerstrasse 9
+                                            5734 Reinach AG
+
+                    li
+                        div
+                            time #[h2 Praktikum als Game Developer]2014
+                            accordion
+                                item
+                                    btn.secondary.plus.even Details
+                                    content
+                                        p.
+                                            Als Anschlusslösung absolvierte ich ein Praktikum in dem ich vorwiegend die
+                                            Game Engine Unity und die Programmiersprache C# kennenlernte.
+                                            Da es nicht anerkannt war, sah ich mich gezwungen das Praktikum abzubrechen
+                                            und in das 10. Schuljahr zu wechseln.
+                                        p.address #[em Das Geschäft wurde am 31.08.2016 aufgegeben.]
+
+                    li
+                        div
+                            time #[h2 Berufswahljahr]2014-2015
+                            accordion
+                                item
+                                    btn.secondary.plus.even Details
+                                    content
+                                        p.
+                                            Das Berufsbildungsjahr überzeugte mich, bei den ContentMakers ein Praktikum
+                                            als Interactive Media Designer (mit Aussicht auf eine Lehrstelle) zu
+                                            beginnen.
+                                        p.address.
+                                            Kantonale Schule für Berufsbildung Aarau
+                                            Bahnhofstrasse 79
+                                            5000 Aarau
+                    li
+                        div
+                            time #[h2 Praktikum als Interactive Media Designer]2015-2016
+                            accordion
+                                item
+                                    btn.secondary.plus.even Details
+                                    content
+                                        p.
+                                            In meiner Zeit als Praktikant lernte ich einiges über Selbstständigkeit und
+                                            Stressbewältigung.
+                                            Aus Interessensverschiedenheiten beschlossen einige Lehrlinge und
+                                            Praktikanten (einschliesslich mir selbst) mit deren Eltern einen eigenen
+                                            Lehrbetrieb zu Gründen.
+                                        p.address.
+                                            ContentMakers
+                                            Birkenstrasse 17
+                                            8306 Brüttisellen
+                    li
+                        div
+                            time #[h2 Lehre als Interactive Media Designer]2016-2017
+                            accordion
+                                item
+                                    btn.secondary.plus.even Details
+                                    content
+                                        p.
+                                            Bei secondfloor.education im Technopark Zürich konnte ich bei der
+                                            Entstehung entscheidend mitwirken. Ich übernahm unter anderem eine
+                                            organisatorische Funktion und trug viel Verantwortung. 2017 sahen
+                                            wir uns wegen finanziellen Komplikation gezwungen den Konkurs
+                                            anzukündigen. Ich beschloss die Lehre abzubrechen um ein Studium zu
+                                            beginnen.
+                                        p.address
+                                            em.
+                                                Das Geschäft wurde im Juni 2017 aufgegeben und der
+                                                Verein Ende 2018 aufgelöst.
+                    li
+                        div
+                            time #[h2 Interactive Media Designer]2017 & 2018
+                            accordion
+                                item
+                                    btn.secondary.plus.even Details
+                                    content
+                                        p.
+                                            2017 begann ich als Interactive Media Designer bei der mediakanzlei GmbH zu
+                                            Arbeiten. Ich habe hauptsächlich Werbeanzeigen entwickelt. Aus persönlichen
+                                            Gründen sah ich mich gezwungen den Plan zu ändern, nahm jedoch meine Stelle
+                                            Anfangs 2018 wieder auf.
+                                            Gegen Ende 2018 sah ich mich durch zu grosse Differenzen erneut gezwungen,
+                                            mein Arbeitsverhältnis aufzulösen.
+                                        p.address.
+                                            mediakanzlei GmbH
+                                            Heinrichstrasse 269
+                                            8005 Zürich
+                    li
+                        div
+                            time #[h2 Bachelorstudium Game Art/Interactive Arts]2018
+                            accordion
+                                item
+                                    btn.secondary.plus.even Details
+                                    content
+                                        p.
+                                            Neben der Arbeit als Interactive Media Designer nahm ich das Game
+                                            Art/Interactive Arts Bachelorstudium auf, um meine Schwäche
+                                            (Illustrationen/Zeichnen/3D) zu verbessern — oder gar zu meistern.
+                                            Ich konnte sehr vieles lernen, musste jedoch das Studium nach der Kündigung
+                                            bei der mediakanzlei abbrechen, da mein Studium vom Arbeitsplatz finanziert
+                                            wurde.
+                                        p.address.
+                                            SAE Institute Zürich
+                                            Buckhauserstrasse 24
+                                            8048 Zürich
+                    li
+                        div
+                            time #[h2 Berufliche Neuorientierung]2018 - 2019
+                            accordion
+                                item
+                                    btn.secondary.plus.even Details
+                                    content
+                                        p.
+                                            Ende 2018 begann ich mich neu zu orientieren und meine Zukunft neu zu
+                                            planen. Nebst diveresen handwerklichen Praktika konnte ich auch einige
+                                            digitale Projekte anpacken und habe viel Erfahrung aus neuen Perspektiven
+                                            gesammelt.
+                    li
+                        div
+                            time #[h2 Informatiker Applikationsentwicklung EFZ]seit 2020
+                            accordion
+                                item
+                                    btn.secondary.plus.even Details
+                                    content
+                                        p.
+                                            Bei der Kauz Informatik & Medien AG konnte ich meine Lehre als Informatiker
+                                            EFZ mit Schwerpunkt Applikationsentwicklung beginnen.
+                                            Dank dem äusserst angenehmen Arbeitsklima kann ich mich täglich auf das Programmieren
+                                            fokussieren (und freuen). Durch das geistreiche Team bleibe ich up-to-date und kann
+                                            auch meine menschlichen Fähigkeiten ausbauen, da das Team mit- und voneinander lernt.
+                                        p.address.
+                                            Kauz Informatik Medien AG
+                                            Luzernstrasse 18
+                                            6275 Ballwil

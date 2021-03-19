@@ -1,17 +1,11 @@
 {
-  "name": "portfolio",
+  "name": "noahhorlacher.github.io",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "github page of noah horlacher",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node rebuild.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0"
-  }
+  "author": "Noah Horlacher",
+  "license": "ISC"
 }
