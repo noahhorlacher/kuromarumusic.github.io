@@ -1,14 +1,33 @@
 const fs = require('fs')
 const glob = require('glob')
 const pug = require('pug')
+const sass = require('node-sass')
 
 const ignorechar = '__' // Prefix for files to ignore
 
 const srcdir = 'src' // Source directory
-const dstdir = '' // Distribution directory
+const dstdir = __dirname // Distribution directory
 
 const rebuildlimit = 500 // Wait for this many millisecs until rebuilding
 let waiting = false // Currently in timeout?
+
+// Rebuild style.sass
+const rebuildsass = () => {
+	console.log('Building stylesheet')
+	try {
+		let sassdata = sass.renderSync({
+			file: 'src/style.sass',
+			indentedSyntax: true,
+			outputStyle: 'compressed'
+		})
+		fs.writeFileSync('css/style.min.css', sassdata.css, {
+			encoding: 'utf-8'
+		})
+		console.log('Built stylesheet')
+	} catch (e) {
+		console.log(e)
+	}
+}
 
 // Rebuild pug files (except the templates)
 const rebuildpug = () => {
@@ -56,6 +75,9 @@ fs.watch(
 		if (e == 'change') {
 			let fext = fname.split('.').pop()
 			if (fext == 'pug') {
+				rebuildpug()
+			} else if (fext == 'sass') {
+				rebuildsass()
 				rebuildpug()
 			} else {
 				console.log(

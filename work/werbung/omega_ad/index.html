@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline-style: none;
+            border: none;
+            cursor: default;
+            user-select: none;
+        }
+
+        #container,
+        #border {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+
+        #container {
+            overflow: hidden;
+            background-color: #ffffff;
+            width: 300px;
+            height: 250px;
+        }
+
+        #container * {
+            position: absolute;
+        }
+
+        #border {
+            border: 1px solid #bcbcbc;
+            background-color: rgba(0, 0, 0, 0);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        #white-bg {
+            background: #ffffff;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            animation: fadeOut 1s ease-out 0.5s 1 forwards;
+        }
+
+        #light_big {
+            top: 113px;
+            left: 95px;
+        }
+
+        #light_small {
+            top: 47px;
+            left: 13px;
+        }
+
+        #logo {
+            animation: fadeOut 0.75s ease-out 3.5s 1 forwards;
+        }
+
+        #txt1 {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in 4s 1 forwards, fadeOut 0.5s ease-out 7s 1 forwards;
+        }
+
+        #white-line {
+            animation: fadeOut 0.5s ease-out 7s 1 forwards;
+        }
+
+        #bg {
+            animation: fadeOut 0.5s ease-out 7s 1 forwards;
+        }
+
+        #watch {
+            opacity: 0;
+            animation: fadeIn 0.75s ease-in 8s 1 forwards;
+        }
+
+        #logo2 {
+            opacity: 0;
+            animation: fadeIn 0.75s ease-in 8s 1 forwards;
+        }
+
+        #txt2 {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in 9.75s 1 forwards;
+        }
+
+        #cta {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in 11.25s 1 forwards;
+        }
+
+        #light_big {
+            opacity: 0;
+            animation: fadeIn 2s ease-in 12.25s 1 forwards, fadeOut 1s ease-out 17.25s 1 forwards;
+        }
+
+        #light_small {
+            opacity: 0;
+            animation: fadeIn 2s ease-in 12.25s 1 forwards, fadeOut 1s ease-out 17.25s 1 forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <img id="watch" src="images/watch.jpg">
+        <img id="logo2" src="images/logo2.png">
+        <img id="bg" src="images/bg.jpg">
+        <div id="white-bg"></div>
+        <img id="white-line" src="images/white-line.png">
+        <img id="txt2" src="images/txt2.png">
+        <img id="txt1" src="images/txt1.png">
+        <img id="cta" src="images/cta.png">
+        <img id="logo" src="images/logo.png">
+        <img id="light_big" src="images/light_big.png">
+        <img id="light_small" src="images/light_small.png">
+        <div id="border"></div>
+    </div>
+</body>
+
+</html>

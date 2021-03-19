@@ -10,10 +10,9 @@ document.querySelectorAll('btn').forEach(
 )
 
 //accordions
-let accordions = document.querySelectorAll('accordion')
 let lastActiveAccElt = []
 
-accordions.forEach((e, i) => {
+document.querySelectorAll('accordion').forEach((e, i) => {
 	e.setAttribute('index', i)
 	lastActiveAccElt.push(null)
 

@@ -32,7 +32,7 @@ html(lang="de")
 
         if subsite && breadcrumbs
             container.breadcrumbs
-                a(href=site)=site
+                a(href='/'+site)=site
                 strong  > #{subsite}
 
         block content

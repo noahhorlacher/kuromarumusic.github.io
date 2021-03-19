@@ -19,8 +19,7 @@ const checkvisible = () => {
 }
 
 // listen for events
-;['load', 'resize', 'scroll'].forEach((e) =>
+for (let e of ['load', 'resize', 'scroll'])
 	window.addEventListener(e, checkvisible)
-)
 
 checkvisible()
