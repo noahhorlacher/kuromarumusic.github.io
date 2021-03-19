@@ -2,9 +2,9 @@
   "name": "noahhorlacher.github.io",
   "version": "1.0.0",
   "description": "github page of noah horlacher",
-  "main": "index.html",
+  "main": "rebuild.js",
   "scripts": {
-    "run": "node rebuild.js"
+    "start": "node rebuild.js"
   },
   "author": "Noah Horlacher",
   "license": "ISC"
