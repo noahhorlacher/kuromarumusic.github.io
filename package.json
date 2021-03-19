@@ -7,5 +7,9 @@
     "start": "node rebuild.js"
   },
   "author": "Noah Horlacher",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "glob": "^7.1.6",
+    "pug": "^3.0.2"
+  }
 }
