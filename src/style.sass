@@ -413,14 +413,12 @@ grid.img
 	color: white
 
 grid.img item
-	-ms-flex-preferred-size: 30%
-	flex-basis: 30%
-	padding-bottom: 30%
+	flex-basis: 50%
+	padding-bottom: 50%
 	position: relative
 	background-position: center
 	background-size: cover
 	opacity: 0.9
-	-webkit-transition: opacity 0.5s
 	transition: opacity 0.5s
 	overflow: hidden
 	border-radius: 2px
@@ -458,9 +456,8 @@ grid.fullsize
 
 grid.fullsize item
 	opacity: 0.6
-	-ms-flex-preferred-size: 20%
-	flex-basis: 20%
-	padding-bottom: 20%
+	flex-basis: 30%
+	padding-bottom: 30%
 	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 238, 0.08), 0 3px 6px rgba(0, 0, 238, 0.115)
 	box-shadow: 0 3px 6px rgba(0, 0, 238, 0.08), 0 3px 6px rgba(0, 0, 238, 0.115)
 	-webkit-transition: opacity 0.5s, -webkit-box-shadow 0.5s
@@ -479,6 +476,7 @@ grid.fullsize item:hover
 	box-shadow: 0 14px 28px rgba(0, 0, 238, 0.125), 0 10px 10px rgba(0, 0, 238, 0.11)
 
 grid.fullsize.alt
+	flex-wrap: wrap
 	width: 70%
 
 grid.fullsize.alt item

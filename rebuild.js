@@ -16,7 +16,7 @@ const rebuildsass = () => {
 	console.log('Building stylesheet')
 	try {
 		let sassdata = sass.renderSync({
-			file: 'src/style.sass',
+			file: './src/style.sass',
 			indentedSyntax: true,
 			outputStyle: 'compressed'
 		})
