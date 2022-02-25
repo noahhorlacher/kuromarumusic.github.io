@@ -1,15 +1,15 @@
 // check if an element is in viewport
 const in_view = e => {
 	var rect = e.getBoundingClientRect()
-	return rect.top >= 0 &&
+	return (rect.top >= 0 &&
 		rect.left >= 0 &&
 		rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-		rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		rect.right <= (window.innerWidth || document.documentElement.clientWidth))
 }
 
 // add visible class if visible (don't remove if invisible)
 const check_visibility = () => {
-	document.querySelectorAll('div.article:not(.visible)').forEach((e) => {
+	document.querySelectorAll('timeline li:not(.visible)').forEach(e => {
 		if (in_view(e)) e.classList.add('visible')
 	})
 }

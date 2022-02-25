@@ -1,24 +1,22 @@
 const fs = require('fs')
 const glob = require('glob')
 const pug = require('pug')
-const sass = require('node-sass')
+const sass = require('sass')
 
 const ignorechar = '__' // Prefix for files to ignore
 
 const srcdir = 'src' // Source directory
 const dstdir = __dirname // Distribution directory
 
-const rebuildlimit = 500 // Wait for this many millisecs until rebuilding
+const rebuildlimit = 1000 // Wait for this many millisecs until rebuilding
 let waiting = false // Currently in timeout?
 
 // Rebuild style.sass
 const rebuildsass = () => {
 	console.log('Building stylesheet')
 	try {
-		let sassdata = sass.renderSync({
-			file: './src/style.sass',
-			indentedSyntax: true,
-			outputStyle: 'compressed'
+		let sassdata = sass.compile('src/style.sass', {
+			style: 'compressed'
 		})
 		fs.writeFileSync('css/style.min.css', sassdata.css, {
 			encoding: 'utf-8'
@@ -74,16 +72,11 @@ fs.watch(
 
 		if (e == 'change') {
 			let fext = fname.split('.').pop()
-			if (fext == 'pug') {
-				rebuildpug()
-			} else if (fext == 'sass') {
+			if (fext == 'pug') rebuildpug()
+			else if (fext == 'sass') {
 				rebuildsass()
 				rebuildpug()
-			} else {
-				console.log(
-					`Build process for file ${fname} of type ${fext} not specified.`
-				)
-			}
+			} else console.log(`Build process for file ${fname} of type ${fext} not specified.`)
 
 			// Set timeout
 			waiting = true
