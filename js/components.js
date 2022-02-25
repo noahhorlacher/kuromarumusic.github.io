@@ -1,38 +1,34 @@
-//disable image drag and drop
-for (let e of document.querySelectorAll('img')) e.ondragstart = () => false
+// disable image drag and drop
+document.querySelectorAll('img').forEach(img => img.ondragstart = () => false)
 
-//buttons
-document.querySelectorAll('btn').forEach(
-	(e) =>
-		(e.onclick = () => {
-			if (e.hasAttribute('link')) window.location = e.getAttribute('link')
-		})
+// button
+// open link if button has link attribute
+document.querySelectorAll('btn').forEach(btn =>
+	btn.onclick = e => {
+		if (btn.hasAttribute('link')) window.location = btn.getAttribute('link')
+	}
 )
 
-//accordions
-let lastActiveAccElt = []
+// accordion
+let last_active_accordion_element = []
 
 document.querySelectorAll('accordion').forEach((e, i) => {
 	e.setAttribute('index', i)
-	lastActiveAccElt.push(null)
+	last_active_accordion_element.push(null)
 
 	e.querySelectorAll('item').forEach((f, j) => {
 		f.querySelector('btn:first-of-type').onclick = () => {
-			if (lastActiveAccElt[i] != j) {
-				if (f.classList.contains('active')) {
-					f.classList.remove('active')
-				} else {
-					f.classList.add('active')
-				}
+			// open/close item
+			if (last_active_accordion_element[i] != j) {
+				if (f.classList.contains('active')) f.classList.remove('active')
+				else f.classList.add('active')
 
-				lastActiveAccElt[i] = j
+				last_active_accordion_element[i] = j
 			} else {
-				if (f.classList.contains('active')) {
-					f.classList.remove('active')
-				} else {
-					f.classList.add('active')
-				}
-				lastActiveAccElt[i] = null
+				if (f.classList.contains('active')) f.classList.remove('active')
+				else f.classList.add('active')
+
+				last_active_accordion_element[i] = null
 			}
 		}
 	})
