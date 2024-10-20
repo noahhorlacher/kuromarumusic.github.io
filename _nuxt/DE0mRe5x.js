@@ -1,4 +1,4 @@
-import{c as h,w as r,o as n,a as t,f as i,e as a,b as o,r as m,u as _,F as g,i as x,t as d,_ as p}from"./CMmZALZa.js";import{_ as f}from"./hxY92W0w.js";const w=[{source:"Leonhard Mondsturm — das Herz des Waldes",text:`Wir Wanderer im Nebelmeer,
+import{c as h,w as r,o as n,a as t,f as i,e as a,b as o,r as m,u as _,F as g,i as x,t as d,_ as p}from"./CpddoQIf.js";import{_ as f}from"./oNq-TP-Y.js";const w=[{source:"Leonhard Mondsturm — das Herz des Waldes",text:`Wir Wanderer im Nebelmeer,
 fühlen diesen Nebel schwer,
 mittendrin ein Andrer steht,
 ich frage mich, wohin er geht.
