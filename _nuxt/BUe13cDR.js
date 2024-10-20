@@ -1,0 +1,1 @@
+import{j as s,o,b as t,a as c,k as a}from"./CnF85IhU.js";const n={},_={class:"p-32"},r={class:"max-w-[960px] mx-auto"};function d(e,l){return o(),t("section",_,[c("div",r,[a(e.$slots,"default")])])}const m=s(n,[["render",d]]);export{m as _};
