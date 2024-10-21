@@ -1,0 +1,1 @@
+import{j as s,o,b as t,a as c,k as a}from"./BIqsJscT.js";const n={},_={class:"p-8 py-16 md:p-16 lg:p-32"},r={class:"max-w-[960px] mx-auto"};function p(e,d){return o(),t("section",_,[c("div",r,[a(e.$slots,"default")])])}const m=s(n,[["render",p]]);export{m as _};
