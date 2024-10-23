@@ -1,4 +1,4 @@
-import{d as _,w as a,g as i,f as e,i as o,b as d,c,h as f,a as l,F as p,k as g,t as s,j as w}from"./DFqPqEGO.js";import{_ as b}from"./FUxr0XOf.js";import{f as x}from"./DOGEOkQ0.js";const k=[{type:"Post",title:"Leonhard Mondsturm Teil 1 veröffentlicht",content:`Es ist soweit. Der erste Schritt ist getan, der erste Punkt meiner Bucketlist abgehakt.
+import{d as _,w as a,g as i,f as e,i as o,b as d,c,h as f,a as l,F as p,k as g,t as s,j as w}from"./DbbmIvDy.js";import{_ as b}from"./D9xZrzoE.js";import{f as x}from"./DOGEOkQ0.js";const k=[{type:"Post",title:"Leonhard Mondsturm Teil 1 veröffentlicht",content:`Es ist soweit. Der erste Schritt ist getan, der erste Punkt meiner Bucketlist abgehakt.
 Leonhard Mondsturm und das Herz des Waldes ist nun auf Amazon erhältlich. In der Schweiz ist es leider nur als eBook erhältlich, wofür ich micht entschuldige.
 Ich danke herzlich für all die Unterstützung die ich gekriegt habe.
 Bei genug Traktion werde ich ein Giveaway von 10 signierten Hardcover Versionen veranlassen.
