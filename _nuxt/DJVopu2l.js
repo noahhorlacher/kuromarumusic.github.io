@@ -1,4 +1,4 @@
-import{d as h,w as a,g as s,f as e,i as o,b as d,c as r,h as m,a as _,F as g,k as x,t as i,e as p,j as k}from"./DbbmIvDy.js";import{_ as f}from"./D9xZrzoE.js";const w=[{source:"Leonhard Mondsturm — das Herz des Waldes",speaker:"Lied des Schicksals",text:`Wir Wanderer im Nebelmeer,
+import{d as h,w as a,g as s,f as e,i as o,b as d,c as r,h as m,a as _,F as g,k as x,t as i,e as p,j as k}from"./BIj2PUu1.js";import{_ as f}from"./CvV5wI35.js";const w=[{source:"Leonhard Mondsturm — das Herz des Waldes",speaker:"Lied des Schicksals",text:`Wir Wanderer im Nebelmeer,
 fühlen diesen Nebel schwer,
 mittendrin ein Andrer steht,
 ich frage mich, wohin er geht.
