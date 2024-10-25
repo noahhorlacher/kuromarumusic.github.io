@@ -1,1 +1,0 @@
-import{l as s,g as o,c as t,f as c,m as n}from"./fQXxyJrR.js";const a={},_={class:"p-8 py-16 md:p-16 lg:p-32"},r={class:"max-w-[960px] mx-auto"};function l(e,p){return o(),t("section",_,[c("div",r,[n(e.$slots,"default")])])}const m=s(a,[["render",l]]);export{m as _};
